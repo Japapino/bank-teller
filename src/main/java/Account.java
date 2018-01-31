@@ -4,34 +4,32 @@ import java.util.Map;
 import java.util.Set;
 
 public class Account {
-	String accountNum;
-	String name; 
+	private String accountNum;
+	private String name; 
+	private double balance; 
 	Map<String,String> accounts = new HashMap<String, String>(); 
 	
-	
-	public Account(String accountNum, String name) {
+	public Account(String accountNum, String name, double balance) {
 		this.accountNum = accountNum;
 		this.name = name;
+		this.balance = balance; 
+	}
+	
+	public double checkBalance() {
+		return balance; 
 	}
 	
 	public int checkAccountList() {
 		return accounts.size(); 
 	}
 	
-	public void addAccount(String accountNum, String accountName) {
-		this.accountNum = accountNum; 
-		this.name = accountName; 
-		accounts.put(accountNum, accountName); 
+	public void deposit(double deposit) {
+		balance+=deposit; 
 	}
 	
-	public String getName(String accountNum) {
-		return accounts.get(accountNum); 
+	public void withdrawl(double withdrawl) {
+		balance-=withdrawl;
 	}
-	
-	public String getNum(String accountName) {
-		return accounts.get(accountName); 
-	}
-	
-	
+
 
 }
