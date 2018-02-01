@@ -27,6 +27,8 @@ public class Account {
 		balance -= withdrawl;
 	}
 
-
+	public String getAccountNumber() {
+		return accountNum;
+	}
 
 }

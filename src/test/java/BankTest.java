@@ -39,7 +39,7 @@ public class BankTest {
 	public void shouldRemoveAccount() {
 		Bank underTest = new Bank(); 
 		underTest.addAccount("1234","bill");
-		underTest.closeAccount("bill"); 
+		underTest.closeAccount("1234"); 
 		int check = underTest.numAccounts(); 
 		assertEquals(0, check); 
 		
