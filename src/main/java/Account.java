@@ -5,31 +5,34 @@ import java.util.Set;
 
 public class Account {
 	private String accountNum;
-	private String name; 
-	private double balance; 
-	Map<String,String> accounts = new HashMap<String, String>(); 
-	
-	public Account(String accountNum, String name, double balance) {
+	private String type;
+	private double balance;
+	// Map<String,String> accounts = new HashMap<String, String>();
+
+	public Account(String accountNum, String type, double balance) {
 		this.accountNum = accountNum;
-		this.name = name;
-		this.balance = balance; 
-	}
-	
-	public double checkBalance() {
-		return balance; 
-	}
-	
-	public int checkAccountList() {
-		return accounts.size(); 
-	}
-	
-	public void deposit(double deposit) {
-		balance+=deposit; 
-	}
-	
-	public void withdrawl(double withdrawl) {
-		balance-=withdrawl;
+		this.type = type;
+		this.balance = balance;
 	}
 
+	public double checkBalance() {
+		return balance;
+	}
+
+	public void deposit(double deposit) {
+		balance += deposit;
+	}
+
+	public void withdrawl(double withdrawl) {
+		balance -= withdrawl;
+	}
+
+//	public String getName(String num) {
+//		return this.name;
+//	}
+//	
+//	public String getNum(String name) {
+//		return this.accountNum; 
+//	}
 
 }
