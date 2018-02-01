@@ -18,7 +18,7 @@ public class BankTest {
 	public void assertThatAnAccountHasBeenAdded() {
 		Bank underTest = new Bank();
 		Account account1 = new Account("1111", "checking", 500.00);
-		underTest.addAccount("1111", account1);
+		underTest.addAccount(account1);
 		assertNotNull(underTest); 		
 	}
 	
@@ -26,9 +26,9 @@ public class BankTest {
 	public void assertTwoAccountsHaveBeenAdded() {
 		Bank underTest = new Bank();
 		Account account1 = new Account("1111", "checking", 500.00);
-		Account account2 = new Account("1111", "checking", 500.00);
-		underTest.addAccount("1111", account1);
-		underTest.addAccount("2222", account2);
+		Account account2 = new Account("2222", "checking", 500.00);
+		underTest.addAccount(account1);
+		underTest.addAccount(account2);
 		int check = underTest.numAccounts(); 
 		assertEquals(2,check); 
 	}
@@ -37,7 +37,7 @@ public class BankTest {
 	public void shouldReturnAccountBalance() {
 		Bank underTest = new Bank();
 		Account account1 = new Account("1111", "", 500.00);
-		underTest.addAccount("1111", account1);
+		underTest.addAccount(account1);
 		double check = underTest.getAccount("1111").checkBalance();
 		Assert.assertEquals(500.00,check,0.001);	
 	}
@@ -45,8 +45,8 @@ public class BankTest {
 	@Test 
 	public void shouldRemoveAccount() {
 		Bank underTest = new Bank(); 
-		Account account1 = new Account("1111", "checking", 500.00);
-		underTest.addAccount("1234",account1);
+		Account account1 = new Account("1234", "checking", 500.00);
+		underTest.addAccount(account1);
 		underTest.closeAccount("1234"); 
 		int check = underTest.numAccounts(); 
 		assertEquals(0, check); 

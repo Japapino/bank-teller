@@ -7,8 +7,8 @@ public class BankApp {
 		Account account1 = new Account("1111", "checking", 500.00);
 		Account account2 = new Account("2222", "savings", 2500.00);
 
-		myBank.addAccount("1111", account1);
-		myBank.addAccount("2222", account2);
+		myBank.addAccount(account1);
+		myBank.addAccount(account2);
 
 		System.out.println("Here are your accounts with us: ");
 		System.out.println(myBank.getAccount("1111").getInfo());
@@ -17,10 +17,11 @@ public class BankApp {
 		int response = 0;
 		while (response != -1) {
 			System.out.println("What would you like to do?");
-			System.out.println("Press 1 for deposit");
-			System.out.println("Press 2 for withdrawl");
-			System.out.println("Press 3 for check balance");
-			System.out.println("Press 4 to close account");
+			System.out.println("Type 1 for deposit");
+			System.out.println("Type 2 for withdrawl");
+			System.out.println("Type 3 for check balance");
+			System.out.println("Type 4 to close account");
+			System.out.println("Type -1 to finish");
 			response = input.nextInt();
 			input.nextLine();
 

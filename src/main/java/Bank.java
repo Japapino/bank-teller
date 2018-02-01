@@ -9,10 +9,10 @@ public class Bank {
 
 	}
 
-	public void addAccount(String num, Account account) {
+	public void addAccount(Account account) {
 
-		accountList.put(num, account);
-		//accountList.put(account.getAccountNumber(), account);
+		//accountList.put(num, account);
+		accountList.put(account.getAccountNumber(), account);
 		
 	}
 
