@@ -34,17 +34,5 @@ public class accountTest {
 		assertEquals(49.99,check,0.0001); 
 	}
 	
-//	@Test
-//	public void shouldGiveName() {
-//		Account underTest = new Account("1234","Bob",0);
-//		String check = underTest.getName("1234");
-//		assertEquals("Bob", check); 
-//	}
-//	
-//	@Test
-//	public void shouldGiveNaumber() {
-//		Account underTest = new Account("1234","Bob",0);
-//		String check = underTest.getNum("Bob");
-//		assertEquals("1234", check); 
-//	}
+
 }

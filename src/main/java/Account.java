@@ -27,12 +27,6 @@ public class Account {
 		balance -= withdrawl;
 	}
 
-//	public String getName(String num) {
-//		return this.name;
-//	}
-//	
-//	public String getNum(String name) {
-//		return this.accountNum; 
-//	}
+
 
 }
