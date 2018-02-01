@@ -3,16 +3,15 @@ import java.util.Map;
 
 public class Bank {
 	private String accountNum;
-	private String accountName;
-	private Map<String, String> accountList = new HashMap<String, String>();
+	private Map<String, Account> accountList = new HashMap<String, Account>();
 
 	public void accountList() {
 
 	}
 
-	public void addAccount(String num, String name) {
-		// TODO Auto-generated method stub
-		accountList.put(num, name);
+	public void addAccount(String num, Account account) {
+
+		accountList.put(num, account);
 	}
 
 	public int numAccounts() {
@@ -20,9 +19,9 @@ public class Bank {
 
 	}
 
-	public String getAccountNum(String accountName) {
+	public Account getAccount(String accountNum) {
 		// TODO Auto-generated method stub
-		return accountList.get(accountName);
+		return accountList.get(accountNum);
 	}
 
 	public void closeAccount(String accountName) {

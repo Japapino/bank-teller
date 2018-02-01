@@ -34,5 +34,9 @@ public class Account {
 	public String getAccountType() {
 		return type;
 	}
+	
+	public String getInfo() {
+		return this.accountNum + " " + this.type +" "+ this.balance;
+	}
 
 }
