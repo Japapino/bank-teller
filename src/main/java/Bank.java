@@ -12,6 +12,8 @@ public class Bank {
 	public void addAccount(String num, Account account) {
 
 		accountList.put(num, account);
+		//accountList.put(account.getAccountNumber(), account);
+		
 	}
 
 	public int numAccounts() {

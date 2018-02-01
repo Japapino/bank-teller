@@ -55,6 +55,20 @@ public class BankApp {
 				input.nextLine();
 			}
 			
+			if (response ==3) {
+				System.out.println("Which account would you like to know the balance of?");
+				String accountChoice = input.nextLine(); 
+				System.out.println("The balance of that account is: " + myBank.getAccount(accountChoice).checkBalance());
+				input.nextLine(); 
+				
+			}
+			
+			if(response==4) {
+				System.out.println("Which account would you like to close?");
+				String accountChoice = input.nextLine(); 
+				myBank.closeAccount(accountChoice);
+				
+			}
 			
 
 		}
